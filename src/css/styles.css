@@ -13,3 +13,214 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./back-link.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/*------------ GALLERY ------------*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px 156px;
+  list-style: none;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.sl-overlay {
+  background: rgba(46, 47, 66, 0.8) !important;
+}
+
+.sl-wrapper {
+  display: flex !important;
+align-items: center !important;
+  justify-content: center !important;
+}
+
+.sl-caption {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin-top: 16px !important;
+  text-align: center !important;
+}
+
+.sl-close {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 9px !important;
+  position: absolute !important;
+  top: 24px !important;
+  right: 32px !important;
+  color: #fff !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.sl-close svg {
+  width: 14px !important;
+  height: 14px !important;
+  display: block !important;
+}
+
+.sl-wrapper .sl-image img {
+  max-width: 1112px !important;
+  max-height: 640px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.sl-prev,
+.sl-next {
+  width: 12px !important;
+  height: 20px !important;
+  padding: 2.25px 6.75px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  /* font-size: 0 !important; */
+  box-sizing: border-box !important;
+}
+
+.sl-wrapper .sl-navigation button {
+    color: #fff !important;
+}
+/*---------------------------------*/
+
+/*-------------- FORM -------------*/
+.feedback-form {
+  width: 408px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[name="email"] {
+  width: 360px;
+  height: 40px;
+}
+
+textarea[name="message"] {
+  width: 360px;
+  height: 80px;
+  resize: none;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #000000;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 1px solid #808080;
+border-radius: 4px;
+  outline: none;
+}
+
+.feedback-form button {
+  all: unset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: #ffffff;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.feedback-form button:hover {
+  background-color: #6c8cff;
+}
+
+.feedback-form button:focus,
+.feedback-form button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+/*---------------------------------*/
